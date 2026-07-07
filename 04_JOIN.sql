@@ -1,4 +1,4 @@
-						SELECT 
+SELECT 
 	Spalten, Spalten as ALIAS
 	..
 FROM TABELLE
@@ -9,6 +9,26 @@ WHERE
 		SPALTE 
 ORDER BY SPALTE, ALIAS, Ordnungszahl asc | desc
 
+/*
+Um Spalten nebeneinander aus verschiedenen Tabellen anzuzeigen, muss ein JOIN verwendet werden.
+
+Es gibt allerdings mehrere Arten von JOINs, die sich in der Art der Verknüpfung unterscheiden.
+
+Der INNER JOIN liefert nur die Datensätze, die in beiden Tabellen vorkommen.
+
+Der LEFT JOIN liefert alle Datensätze der linken Tabelle 
+		und die passenden Datensätze der rechten Tabelle.
+
+Der Right JOIN liefert alle Datensätze der rechten Tabelle 
+		und die passenden Datensätze der linken Tabelle.
+
+Der CROSS JOIN liefert alle Kombinationen der Datensätze beider Tabellen.
+
+Der FULL OUTER JOIN liefert alle Datensätze beider Tabellen, auch wenn keine Übereinstimmung besteht.
+
+Der sogenannte SELF JOIN ist ein Join, bei dem eine Tabelle mit sich selbst verknüpft wird.
+
+*/
 
 --JOIN:
 
