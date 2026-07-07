@@ -13,11 +13,12 @@ Aber auch wg Security. Sie können eig Rechte haben
 select * from (select ...) t
 
 
-CREATE VIEW vVerkauf
+CREATE or alter VIEW vVerkauf
 as
 SELECT Customers.CustomerID, Customers.CompanyName, Customers.ContactName, Customers.ContactTitle, Customers.City, Customers.Country, Orders.EmployeeID, Orders.OrderDate, Orders.Freight, Orders.ShipCity, Orders.ShipCountry, [Order Details].UnitPrice, [Order Details].Quantity, [Order Details].OrderID, 
           [Order Details].ProductID, Employees.LastName, Employees.FirstName, Products.ProductName, Products.UnitsInStock
-FROM   Customers INNER JOIN
+    , ( [Order Details].UnitPrice*[Order Details].Quantity)  as Possumme
+    FROM   Customers INNER JOIN
           Orders ON Customers.CustomerID = Orders.CustomerID INNER JOIN
           Employees ON Orders.EmployeeID = Employees.EmployeeID INNER JOIN
           [Order Details] ON Orders.OrderID = [Order Details].OrderID INNER JOIN
