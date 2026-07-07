@@ -35,7 +35,8 @@
 
 	Andere:
 	XML
-	JSON
+	JSON	ab SQL 2025
 	geometry
 	geography
+	vector in SQL 2025
 */
